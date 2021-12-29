@@ -2,5 +2,7 @@
 <ul id="posts">
 {{- range where site.RegularPages "Type" "in" site.Params.mainSections }}
     {{ .Render "li" }}
+{{ else }}
+    {{ .Render "noposts" }}
 {{- end }}
 </ul>
